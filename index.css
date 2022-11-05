@@ -23,7 +23,9 @@ body{
     min-width: 1280px;
     width: auto;
     margin: 0 auto;
-    background-color: chocolate;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    
 }
 /* Header */
 .header {
