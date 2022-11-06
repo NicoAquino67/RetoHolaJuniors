@@ -77,7 +77,7 @@ body{
     height: 470px;
     border-radius: 30px;
     background-color: var(--white);
-    box-shadow: 10px 10px 16px #ccc, -3px -3px 30px #ccc;
+    box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #fff;
 }
 .presentationText{
     position: relative;
@@ -93,13 +93,19 @@ body{
     width: 570px;
     font-family: 'Big Shoulders Display', cursive;
 }
+.profileImg {
+    position: relative;
+    width: 300px;
+    top: -200px;
+    left: 930px;
+}
 .projects{
     margin: 30px auto;
     width: 1400px;
     height: 380px;
     border-radius: 30px;
     background-color: var(--white);
-    box-shadow: 10px 10px 16px #ccc, -3px -3px 30px #ccc;
+    box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #fff;
     display: inline-grid;
     grid-gap: 70px;
     grid-template-columns: 215px 230px 230px 230px 215px;
@@ -109,14 +115,18 @@ body{
     grid-row: 10 / 1;
 }
 .projectIMG{
-    align-content: center;
-    width: 200px;
-    height: 170px;
+    position: relative;
+    width: 150px;
+    height: 150px;
     border-radius: 30px;
+    top: 25px;
+    left: 45px;
 }
 a > #mokepont #BasicPrograming #workTimeTable{
-    width: max-content;
+    width: 300px;
+    height: 300px;
 }
+
 .projects > #princTitle {
     position: relative;
     top: -15px;
@@ -127,28 +137,40 @@ a > #mokepont #BasicPrograming #workTimeTable{
 }
 .repo {
     background-color: transparent;
-    box-shadow: .5rem .5rem .5rem #ccc;
+    box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #fff;
+    border-radius: 10px;
     position: relative;
-    width: 230px;
-    height: 140px;
-    top: 80px;
+    width: 250px;
+    height: 300px;
+    top: 65px;
+    overflow: hidden;
+}
+
+.repo > .articleTitle .project{
+    position: static;
+    width: fit-content;
+    height: max-content;
 }
 /* Bottom */
 .socialNetworks {
+    background-color: var(--white);
+    border-radius: 30px;
+    box-shadow: 3px 3px 6px #ccc, -3px -3px 6px #fff;
     width: 1400px;
-    height: 100px;
-}
-.profileImg {
-    position: relative;
-    width: 300px;
-    top: -200px;
-    left: 930px;
-
+    height: 150px;
 }
 .profileImg > img{
     border-radius: 20px;
 }
 
 .socialNetworkImg{
+    display: inline-block;
+    padding: 15px;
     width: 30px;
+}
+
+.socialNetworkImg:hover{
+    animation-duration: 300ms;
+    padding: 25px;
+    width: 45px;
 }
