@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Marck+Script&family=Roboto&display=swap');
 
+/* Basic styling */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +20,7 @@ body {
     box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.75);
     border-radius: 3px;
     padding: 10px;
-    text-align: center;
+    align-items: center;
 }
 
 .header {
@@ -51,54 +52,78 @@ body {
     display: grid;
     gap: 10px;
     grid-template: 
-        "header" 100px
+        "header" 70px
         "navbar" 30px
         "main" auto
-        "sidebar"
-        "footer" 100px;
+        "sidebar" 160px
+        "footer" 70px;
 }
-/* Logo */
+/* header */
 .div-logo{
+    position: relative;
+    top: -10px;
     display: grid;
-    grid-template-columns: 45px 300px;
-    grid-template-rows: 45px auto;
-    grid-template: 
-    "logo  Isologo" 45px
-    "logo  slogan"  45px ;
+    grid-template-columns: 120px auto;
+    grid-template-rows: 45px 25px;
+    grid-template-areas: 
+    "logo  Isologo"
+    "logo  slogan";
     align-items: center;
 }
 .div-logo > img {
-    
     grid-area: logo;
     position: relative;
-    width: auto;
-    height: 90px;
-    left: 35px;
+    height: 65px;
+    left: 15px;
+}
+.div-logo > img:hover {
+    cursor: pointer;
+    filter: drop-shadow(.15rem .15rem 3px #ccc);
+    transition: filter 250ms;
+}
+.div-logo > img:not(hover) {
+    transition: filter 300ms;
 }
 
 .h1 {
     grid-area: Isologo;
-    font-family: 'Mark Scriprt', cursive;
-    font-size: 40px;
+    font-family: 'Marck Script', cursive;
+    position: relative;
+    font-size: 180%;
+    font-weight: 700;
+    padding-left: 0px;
 }
 .h3 {
-    font-family: 'Courgette', cursive;
     grid-area: slogan;
-    font-size: 22px;
+    font-family: 'Courgette', cursive;
+    font-size: 80%;
+    font-weight: 200;
+    padding-left: 10px;
 }
 
-/* Media Mobile */
+.nav {
+    display: flex;/*
+    flex-direction: row;*/
+    list-style-type: none;
+    list-style-position: inside;
+    justify-content: center;
+    width: auto;
+    padding: 0px 50px 0px 0px;
+}
+
+/* Media Mobile 
 @media (min-width: 600px) {
     .grid-container{
         grid-template-columns: 200px auto;
         grid-template-rows: 100px 50px auto 100px;
         grid-template-areas: 
-            "header  header"
-            "navbar  navbar"
-            "sidebar main"
-            "footer  footer";
+        "header  header"
+        "navbar  navbar"
+        "sidebar main"
+        "footer  footer";
     }
-    /* Logo */
+    */
+    /* Logo 
     .div-logo{
         display: grid;
         grid-template-columns: 300px;
@@ -115,7 +140,7 @@ body {
         height: 90px;
         left: 35px;
     }
-
+    
     .h1 {
         grid-area: Isologo;
         font-size: 40px;
@@ -124,21 +149,22 @@ body {
         grid-area: slogan;
         font-size: 22px;
     }
-
+    
 }
+*/
 
-/* Media Tablet */
+/* Media Tablet 
 
 @media (min-width: 900px) {
     .grid-container{
         grid-template-columns: 500px auto;
         grid-template-rows: 100px 50px auto auto 100px;
         grid-template-areas: 
-            "header  header   header"
-            "main    main     navbar"
-            "main    main     navbar"
-            "main    main     sidebar"
-            "footer  footer   footer";
+        "header  header   header"
+        "main    main     navbar"
+        "main    main     navbar"
+        "main    main     sidebar"
+        "footer  footer   footer";
     }
     
     .div-logo{
@@ -148,5 +174,6 @@ body {
         width: 90px;
         height: fit-content;
     }
-    /* TODO: estilizar para tabletas y desktop*/
 }
+    */
+    /* TODO: estilizar para tabletas y desktop*/
