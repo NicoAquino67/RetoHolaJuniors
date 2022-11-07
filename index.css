@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Marck+Script&family=Roboto&display=swap');
 
 * {
     box-sizing: border-box;
@@ -57,6 +57,37 @@ body {
         "sidebar"
         "footer" 100px;
 }
+/* Logo */
+.div-logo{
+    display: grid;
+    grid-template-columns: 45px 300px;
+    grid-template-rows: 45px auto;
+    grid-template: 
+    "logo  Isologo" 45px
+    "logo  slogan"  45px ;
+    align-items: center;
+}
+.div-logo > img {
+    
+    grid-area: logo;
+    position: relative;
+    width: auto;
+    height: 90px;
+    left: 35px;
+}
+
+.h1 {
+    grid-area: Isologo;
+    font-family: 'Mark Scriprt', cursive;
+    font-size: 40px;
+}
+.h3 {
+    font-family: 'Courgette', cursive;
+    grid-area: slogan;
+    font-size: 22px;
+}
+
+/* Media Mobile */
 @media (min-width: 600px) {
     .grid-container{
         grid-template-columns: 200px auto;
@@ -67,17 +98,54 @@ body {
             "sidebar main"
             "footer  footer";
     }
+    /* Logo */
+    .div-logo{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 110px;
+        grid-template: 
+        "logo  Isologo" 
+        "logo  slogan"  ;
+        align-items: center;
+    }
+    .div-logo > img {
+        grid-area: logo;
+        position: relative;
+        width: auto;
+        height: 90px;
+        left: 35px;
+    }
+
+    .h1 {
+        grid-area: Isologo;
+        font-size: 40px;
+    }
+    .h3 {
+        grid-area: slogan;
+        font-size: 22px;
+    }
+
 }
+
+/* Media Tablet */
 
 @media (min-width: 900px) {
     .grid-container{
         grid-template-columns: 500px auto;
-        grid-template-rows: 100px 50px auto 100px;
+        grid-template-rows: 100px 50px auto auto 100px;
         grid-template-areas: 
             "header  header   header"
             "main    main     navbar"
             "main    main     navbar"
             "main    main     sidebar"
             "footer  footer   footer";
+    }
+    
+    .div-logo{
+        display: flex;
+    }
+    .div-logo > img {
+        width: 90px;
+        height: fit-content;
     }
 }
