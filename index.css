@@ -130,7 +130,9 @@ body {
 .nav-link:not(hover){
     transition: 250ms;
 }
-
+.nav-toggle{
+    visibility: hidden;
+}
 /* Media Mobile */ 
 @media (min-width: 300px) {
     
@@ -342,9 +344,10 @@ body {
     }
     .nav-link{
         color: var(--powder-blue);
-        font-size: 100%;
+        font-size: 120%;
         position: relative;
         top: 10px;
+        left: 350px;
         text-decoration: none;
     }
     .nav-link:hover{
@@ -355,4 +358,20 @@ body {
         transition: 250ms;
     }
         
+    .nav-toggle{
+        visibility: visible;
+        color: var(--misty-rose);
+        background: none;
+        border: none;
+        position: relative;
+        font-size:  45px;
+        top: -60px;
+        padding-left: 120px;
+        display: none;
+    }
+
+    .nav-toggle:hover{
+        color: var(--rhythm);
+    }
+
     }
